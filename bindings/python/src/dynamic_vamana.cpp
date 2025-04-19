@@ -261,6 +261,7 @@ void wrap(py::module& m) {
     );
 
     add_search_specialization<float>(vamana);
+    add_search_specialization<int8_t>(vamana);
     add_threading_interface(vamana);
     add_data_interface(vamana);
 
@@ -300,6 +301,7 @@ void wrap(py::module& m) {
 
     // Index building.
     add_build_specialization<float>(vamana);
+    add_build_specialization<int8_t>(vamana);
 
     // Index modification.
     add_points_specialization<float>(vamana);

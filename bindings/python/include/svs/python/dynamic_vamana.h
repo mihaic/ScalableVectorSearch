@@ -30,6 +30,10 @@ template <typename F> void for_standard_specializations(F&& f) {
     X(float, float, DistanceIP, Dynamic);
     X(float, svs::Float16, DistanceL2, Dynamic);
     X(float, svs::Float16, DistanceIP, Dynamic);
+    X(float, int8_t, DistanceL2, Dynamic);
+    X(float, int8_t, DistanceIP, Dynamic);
+    X(int8_t, int8_t, DistanceL2, Dynamic);
+    X(int8_t, int8_t, DistanceIP, Dynamic);
 #undef X
 }
 

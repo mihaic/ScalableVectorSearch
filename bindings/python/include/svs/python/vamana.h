@@ -85,6 +85,7 @@ template <typename F> void for_standard_specializations(F&& f) {
 
     // XN(int8_t,  int8_t,       100); // MSSpace 1B
     X (int8_t,  int8_t,       Dynamic, EnableBuild::FromFileAndArray);
+    X (float,  int8_t,       Dynamic, EnableBuild::FromFileAndArray);
     // clang-format on
 #undef XN
 #undef X
@@ -216,6 +217,7 @@ Calling this method should not affect recall.)"
     ///// Experiemntal Interfaces
     add_experimental_calibration<svs::Float16>(manager);
     add_experimental_calibration<float>(manager);
+    add_experimental_calibration<int8_t>(manager);
 }
 
 void wrap(pybind11::module& m);
